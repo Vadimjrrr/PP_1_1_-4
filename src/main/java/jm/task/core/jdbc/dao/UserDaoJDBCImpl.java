@@ -1,3 +1,4 @@
+
 package jm.task.core.jdbc.dao;
 
 import jm.task.core.jdbc.model.User;
@@ -12,7 +13,8 @@ public class UserDaoJDBCImpl implements UserDao {
 
     }
 
-    Connection connection = Util.createConnection();
+    //    Connection connection = Util.createConnection();
+    Connection connection = Util.getConnection();
 
     public void createUsersTable() {
         try (Statement statement = connection.createStatement()) {
